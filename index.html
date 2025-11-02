@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شهریار | شاعر پرآوازه ایران</title>
+    <meta name="description" content="سایت رسمی شهریار - زندگی‌نامه، اشعار، مقالات و تحلیل‌های آثار سید محمدحسین بهجت تبریزی">
+    <meta name="keywords" content="شهریار, شعر فارسی, ادبیات ایران, بهجت تبریزی, علی ای همای رحمت">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="poem-loader">
+                <i class="fas fa-feather-alt"></i>
+                <p>در حال بارگذاری...</p>
+                <div class="loader-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- هدر -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="logo">
+                    <i class="fas fa-feather-alt"></i>
+                    <span>شهریار</span>
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">خانه</a></li>
+                <li><a href="#about" class="nav-link">زندگینامه</a></li>
+                <li><a href="#poems" class="nav-link">اشعار</a></li>
+                <li><a href="#gallery" class="nav-link">گالری</a></li>
+                <li><a href="#articles" class="nav-link">مقالات</a></li>
+                <li><a href="#contact" class="nav-link">تماس</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="جستجو در اشعار..." id="globalSearch">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <button class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- بخش اصلی -->
+    <main>
+        <!-- هیرو -->
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="title-wrapper">
+                            <h1 class="hero-title">
+                                <span class="title-line">سید محمدحسین</span>
+                                <span class="title-line accent">بهجت تبریزی</span>
+                            </h1>
+                            <div class="subtitle">
+                                <span class="subtitle-text">شهریار</span>
+                                <div class="title-underline"></div>
+                            </div>
+                        </div>
+                        
+                        <p class="hero-desc">
+                            شاعر پرآوازه ایران که با اشعار ناب و ماندگارش، 
+                            در قلب ادبیات فارسی جاودانه شد. 
+                            <span class="highlight">"آمدی جانم به قربانت ولی حالا چرا؟"</span>
+                        </p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="number">۸۲</span>
+                                <span class="label">سال عمر پربرکت</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">۷۰۰+</span>
+                                <span class="label">شعر ماندگار</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">۳۰+</span>
+                                <span class="label">کتاب منتشر شده</span>
+                            </div>
+                        </div>
+
+                        <div class="hero-actions">
+                            <button class="btn btn-primary" onclick="scrollToSection('poems')">
+                                <span>مشاهده اشعار</span>
+                                <i class="fas fa-book-open"></i>
+                            </button>
+                            <button class="btn btn-secondary" onclick="scrollToSection('about')">
+                                <span>زندگینامه</span>
+                                <i class="fas fa-user"></i>
+                            </button>
+                            <button class="btn btn-outline" onclick="playRandomPoem()">
+                                <span>شنیدن شعر</span>
+                                <i class="fas fa-music"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="floating-card">
+                            <div class="card-content">
+                                <div class="poem-preview">
+                                    <h3>آمدی جانم به قربانت</h3>
+                                    <p>آمدی جانم به قربانت ولی حالا چرا؟</p>
+                                    <p>بی‌وفا حالا که من افتاده‌ام از پا چرا؟</p>
+                                    <button class="read-more-btn" onclick="showPoemModal(1)">
+                                        ادامه شعر
+                                        <i class="fas fa-arrow-left"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="image-container">
+                            <div class="main-image">
+                                <img src="shahriar3.jpg" alt="شهریار">
+                                <div class="image-overlay">
+                                    <div class="overlay-content">
+                                        <h3>شهریار</h3>
+                                        <p>۱۳۶۷-۱۲۸۵</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-frame"></div>
+                            
+                            <div class="floating-elements">
+                                <div class="floating-element el1">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="floating-element el2">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="floating-element el3">
+                                    <i class="fas fa-mosque"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <p>اسکرول کنید</p>
+            </div>
+        </section>
+
+        <!-- زندگینامه -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">زندگینامه شهریار</h2>
+                    <p class="section-subtitle">سیری در زندگی پرافتخار شاعر بزرگ ایران</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="bio-card">
+                            <h3>دوران کودکی و جوانی</h3>
+                            <p>سید محمدحسین بهجت تبریزی در سال ۱۲۸۵ در تبریز متولد شد. از کودکی استعداد شگرفی در شعر و ادبیات داشت و در جوانی به تهران آمد تا در دارالفنون تحصیل کند.</p>
+                        </div>
+                        <div class="bio-card">
+                            <h3>عشق و شعر</h3>
+                            <p>شهریار در جوانی عاشق دختری به نام ثریا شد که این عشق الهام‌بخش بسیاری از اشعار عاشقانه او گردید. شعر "آمدی جانم به قربانت" از مشهورترین آثار این دوره است.</p>
+                        </div>
+                        <div class="bio-card">
+                            <h3>شاعری و ماندگاری</h3>
+                            <p>شهریار به دو زبان فارسی و ترکی آذربایجانی شعر سروده و آثار او از غزلیات عاشقانه تا اشعار مذهبی و اجتماعی گسترده است.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">۸۲</div>
+                            <div class="stat-label">سال عمر</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">۵۰۰+</div>
+                            <div class="stat-label">شعر فارسی</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">۲۰۰+</div>
+                            <div class="stat-label">شعر ترکی</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">۳۰+</div>
+                            <div class="stat-label">کتاب منتشر شده</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- اشعار -->
+        <section id="poems" class="poems">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">گزیده اشعار</h2>
+                    <p class="section-subtitle">برترین آثار ماندگار شهریار</p>
+                </div>
+
+                <div class="poem-categories">
+                    <button class="category-btn active" data-category="all">همه</button>
+                    <button class="category-btn" data-category="love">عاشقانه</button>
+                    <button class="category-btn" data-category="religious">مذهبی</button>
+                    <button class="category-btn" data-category="social">اجتماعی</button>
+                </div>
+
+                <div class="poems-grid">
+                    <div class="poem-card" data-category="love">
+                        <div class="poem-header">
+                            <h3>آمدی جانم به قربانت</h3>
+                            <div class="poem-category love">عاشقانه</div>
+                        </div>
+                        <div class="poem-content">
+                            <p>آمدی جانم به قربانت ولی حالا چرا؟</p>
+                            <p>بی‌وفا حالا که من افتاده‌ام از پا چرا؟</p>
+                            <p>نوشدارویی و بعد از مرگ سهراب آمدی</p>
+                            <p>سنگدل این زودتر می‌خواستی حالا چرا؟</p>
+                        </div>
+                        <div class="poem-actions">
+                            <button class="poem-btn favorite" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="poem-btn share" onclick="sharePoem(1)">
+                                <i class="fas fa-share"></i>
+                            </button>
+                            <button class="poem-btn read-more" onclick="showPoemModal(1)">
+                                <i class="fas fa-book-open"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="poem-card" data-category="religious">
+                        <div class="poem-header">
+                            <h3>علی ای همای رحمت</h3>
+                            <div class="poem-category religious">مذهبی</div>
+                        </div>
+                        <div class="poem-content">
+                            <p>علی ای همای رحمت تو چه آیتی خدا را</p>
+                            <p>که به ماسوا فکندی همه سایه هما را</p>
+                            <p>دل اگر خداشناسی همه در رخ علی بین</p>
+                            <p>به علی شناختم من به خدا قسم خدا را</p>
+                        </div>
+                        <div class="poem-actions">
+                            <button class="poem-btn favorite" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="poem-btn share" onclick="sharePoem(2)">
+                                <i class="fas fa-share"></i>
+                            </button>
+                            <button class="poem-btn read-more" onclick="showPoemModal(2)">
+                                <i class="fas fa-book-open"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="poem-card" data-category="social">
+                        <div class="poem-header">
+                            <h3>هذیان دل</h3>
+                            <div class="poem-category social">اجتماعی</div>
+                        </div>
+                        <div class="poem-content">
+                            <p>ای شکسته دل من، وی اسیر روزگار</p>
+                            <p>وی اسیر بند هجران، وی اسیر انتظار</p>
+                            <p>دل من ز هجر تو، چون کبوتر قفسی</p>
+                            <p>پر می‌زند به دیوار، سر می‌زند به دیوار</p>
+                        </div>
+                        <div class="poem-actions">
+                            <button class="poem-btn favorite" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="poem-btn share" onclick="sharePoem(3)">
+                                <i class="fas fa-share"></i>
+                            </button>
+                            <button class="poem-btn read-more" onclick="showPoemModal(3)">
+                                <i class="fas fa-book-open"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="poem-card" data-category="love">
+                        <div class="poem-header">
+                            <h3>یاد ایام</h3>
+                            <div class="poem-category love">عاشقانه</div>
+                        </div>
+                        <div class="poem-content">
+                            <p>یاد ایام دلکش دانشکده، ای یار</p>
+                            <p>یاد آن روز که بودم من و تو هردو یار</p>
+                            <p>یاد آن روز که در بزم تو بودم شمع</p>
+                            <p>تو چو پروانه به گردم زدی صد پرواز</p>
+                        </div>
+                        <div class="poem-actions">
+                            <button class="poem-btn favorite" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="poem-btn share" onclick="sharePoem(4)">
+                                <i class="fas fa-share"></i>
+                            </button>
+                            <button class="poem-btn read-more" onclick="showPoemModal(4)">
+                                <i class="fas fa-book-open"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- گالری -->
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">گالری تصاویر</h2>
+                    <p class="section-subtitle">مروری بر زندگی و آثار شهریار</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="shahriar3.jpg" alt="شهریار">
+                        <div class="gallery-overlay">
+                            <h3>شهریار در جوانی</h3>
+                            <button class="view-btn" onclick="openLightbox(0)">مشاهده</button>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="shahriar2.jpg" alt="شهریار در حال مطالعه">
+                        <div class="gallery-overlay">
+                            <h3>شهریار در حال مطالعه</h3>
+                            <button class="view-btn" onclick="openLightbox(1)">مشاهده</button>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="shahriar4.jpg" alt="مقبره الشعرا">
+                        <div class="gallery-overlay">
+                            <h3>مقبره الشعرای تبریز</h3>
+                            <button class="view-btn" onclick="openLightbox(2)">مشاهده</button>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="shahriar5.jpg" alt="خانه شهریار">
+                        <div class="gallery-overlay">
+                            <h3>خانه شهریار در تبریز</h3>
+                            <button class="view-btn" onclick="openLightbox(3)">مشاهده</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- مقالات -->
+        <section id="articles" class="articles">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">مقالات و تحلیل‌ها</h2>
+                    <p class="section-subtitle">نقد و بررسی آثار شهریار توسط اساتید ادبیات</p>
+                </div>
+
+                <div class="articles-grid">
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="https://via.placeholder.com/400x250/8B5A2B/ffffff?text=تحلیل+شعر" alt="تحلیل شعر">
+                        </div>
+                        <div class="article-content">
+                            <h3>تحلیل شعر عاشقانه شهریار</h3>
+                            <p>بررسی عمیق اشعار عاشقانه شهریار و تأثیرپذیری از مکتب ادبی سبک هندی...</p>
+                            <div class="article-meta">
+                                <span class="author">دکتر محمدرضا شفیعی کدکنی</span>
+                                <span class="date">۱۴۰۲/۰۶/۱۵</span>
+                            </div>
+                            <button class="read-article-btn" onclick="openArticle(1)">مطالعه مقاله</button>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="https://via.placeholder.com/400x250/654321/ffffff?text=سبک+شعری" alt="سبک شعری">
+                        </div>
+                        <div class="article-content">
+                            <h3>سبک شعری شهریار در ادبیات معاصر</h3>
+                            <p>بررسی ویژگی‌های سبکی شعر شهریار و تأثیر آن بر شاعران نسل بعد...</p>
+                            <div class="article-meta">
+                                <span class="author">دکتر سیروس شمیسا</span>
+                                <span class="date">۱۴۰۲/۰۵/۲۰</span>
+                            </div>
+                            <button class="read-article-btn" onclick="openArticle(2)">مطالعه مقاله</button>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="https://via.placeholder.com/400x250/A67B5B/ffffff?text=تأثیر+فرهنگی" alt="تأثیر فرهنگی">
+                        </div>
+                        <div class="article-content">
+                            <h3>تأثیر فرهنگی اشعار شهریار بر جامعه</h3>
+                            <p>بررسی نقش اشعار شهریار در شکل‌دهی به فرهنگ عمومی و ادبیات روزمره...</p>
+                            <div class="article-meta">
+                                <span class="author">دکتر محمود عبادیان</span>
+                                <span class="date">۱۴۰۲/۰۴/۱۰</span>
+                            </div>
+                            <button class="read-article-btn" onclick="openArticle(3)">مطالعه مقاله</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- تماس -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">تماس با ما</h2>
+                    <p class="section-subtitle">نظرات و پیشنهادات خود را با ما در میان بگذارید</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>اطلاعات تماس</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>آدرس</strong>
+                                <p>تبریز، مقبره الشعرا</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>ایمیل</strong>
+                                <p>info@shahriar.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>تلفن</strong>
+                                <p>+98 41 1234 5678</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="نام شما" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="ایمیل شما" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="موضوع">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="پیام شما" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>ارسال پیام</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="footer-waves">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo">
+                            <i class="fas fa-feather-alt"></i>
+                            <span>شهریار</span>
+                        </div>
+                        <p class="footer-desc">
+                            بزرگداشت یاد و خاطره سید محمدحسین بهجت تبریزی، 
+                            شاعر پرآوازه ایران که با اشعار ماندگارش در قلب ادبیات فارسی جاودانه شد
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">لینک‌های سریع</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">صفحه اصلی</a></li>
+                        <li><a href="#about">زندگینامه</a></li>
+                        <li><a href="#poems">اشعار برگزیده</a></li>
+                        <li><a href="#gallery">گالری تصاویر</a></li>
+                        <li><a href="#contact">تماس با ما</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">اشعار ماندگار</h3>
+                    <div class="poem-quotes">
+                        <div class="quote">
+                            <p>"آمدی جانم به قربانت ولی حالا چرا؟"</p>
+                            <span>آمدی جانم به قربانت</span>
+                        </div>
+                        <div class="quote">
+                            <p>"علی ای همای رحمت تو چه آیتی خدا را"</p>
+                            <span>علی ای همای رحمت</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">عضویت در خبرنامه</h3>
+                    <p class="newsletter-desc">
+                        برای دریافت جدیدترین اشعار و مطالب مربوط به شهریار
+                        ایمیل خود را وارد کنید
+                    </p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <div class="input-group">
+                            <input type="email" placeholder="ایمیل شما" required>
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <div class="copyright">
+                    <p>&copy; 2023 کلیه حقوق محفوظ است | طراحی شده با <i class="fas fa-heart"></i> برای شهریار</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- مدال شعر -->
+    <div class="modal" id="poemModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalPoemTitle">شعر</h3>
+                <button class="close-modal" onclick="closePoemModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="poem-full" id="modalPoemContent">
+                    <!-- محتوای شعر -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- لایت‌باکس -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-nav prev" onclick="changeImage(-1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <button class="lightbox-nav next" onclick="changeImage(1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <img id="lightboxImage" src="" alt="">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
